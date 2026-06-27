@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DOKDA – Deutsch Orientalischer Kulturverein Darmstadt</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav class="navbar">
+    <a href="index.html" class="nav-logo">
+      <img src="logo.png" alt="DOKDA Logo" />
+      <div class="nav-logo-text">
+        <span class="logo-name">DOKDA</span>
+        <span class="logo-sub">Deutsch Orientalischer Kulturverein<br>Darmstadt</span>
+      </div>
+    </a>
+    <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')">&#9776;</button>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="membership.html">Membership</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="donate.html" class="btn-donate-nav">Donate</a></li>
+    </ul>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-pattern"></div>
+    <div class="hero-content">
+      <img src="logo.png" alt="DOKDA Logo" class="hero-logo" />
+      <p class="hero-sub">&#1576;&#1616;&#1587;&#1618;&#1605;&#1616; &#1575;&#1604;&#1604;&#1617;&#1614;&#1607;&#1616; &#1575;&#1604;&#1585;&#1617;&#1614;&#1581;&#1618;&#1605;&#1614;&#1606;&#1616; &#1575;&#1604;&#1585;&#1617;&#1614;&#1581;&#1616;&#1610;&#1605;&#1616;</p>
+      <h1>Deutsch Orientalischer Kulturverein</h1>
+      <h2>DOKDA &ndash; Darmstadt</h2>
+      <p class="hero-desc">Serving the Muslim community of Darmstadt. A place of worship, learning, and community.</p>
+      <div class="hero-actions">
+        <a href="about.html" class="btn-primary">Visit Us</a>
+        <a href="events.html" class="btn-secondary">Upcoming Events</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="prayer-section">
+    <div class="container">
+      <h2 class="section-title">Prayer Times <span class="date-label" id="today-date"></span></h2>
+      <div class="custom-prayer-widget">
+        <div class="prayer-clock-row">
+          <div class="prayer-clock-side">
+            <span class="pclock-label">Shur&#363;q</span>
+            <span class="pclock-time" id="pt-Sunrise">--:--</span>
+          </div>
+          <div class="prayer-clock-center">
+            <div class="pclock-mosque">DOKDA &middot; DARMSTADT</div>
+            <div class="pclock-live" id="live-clock">--:--:--</div>
+            <div class="pclock-date" id="pclock-date"></div>
+            <div class="pclock-hijri" id="pclock-hijri"></div>
+          </div>
+          <div class="prayer-clock-side">
+            <span class="pclock-label">Jumu'ah</span>
+            <span class="pclock-time">14:30</span>
+          </div>
+        </div>
+        <div class="prayer-times-row" id="prayer-times-row">
+          <div class="pt-loading">Loading prayer times&hellip;</div>
+        </div>
+      </div>
+      <p class="prayer-note">Times for Darmstadt, Germany &middot; via <a href="https://mawaqit.net/de/m/dokda-darmstadt-64287-germany-1" target="_blank" style="color:var(--blue-dark);font-weight:600;">Mawaqit</a></p>
+    </div>
+  </section>
+
+  <section class="counters-section reveal">
+    <div class="counters-grid">
+      <div class="counter-item">
+        <div class="counter-num" data-target="10">0+</div>
+        <div class="counter-label">Years Serving</div>
+      </div>
+      <div class="counter-item">
+        <div class="counter-num" data-target="5">0</div>
+        <div class="counter-label">Daily Prayers</div>
+      </div>
+      <div class="counter-item">
+        <div class="counter-num" data-target="100">0+</div>
+        <div class="counter-label">Community Members</div>
+      </div>
+      <div class="counter-item">
+        <div class="counter-num" data-target="1">0</div>
+        <div class="counter-label">Permanent Home</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="info-section">
+    <div class="container cards-row reveal">
+      <div class="card">
+        <div class="card-icon">&#128332;</div>
+        <h3>Friday Prayer</h3>
+        <p>Jumu'ah Khutbah begins shortly after Dhuhr adhan. All are welcome &mdash; please arrive early.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">&#128197;</div>
+        <h3>Events</h3>
+        <p>Islamic lectures, Quran classes, community iftars, and cultural programmes throughout the year.</p>
+        <a href="events.html" class="card-link">See all events &rarr;</a>
+      </div>
+      <div class="card">
+        <div class="card-icon">&#128205;</div>
+        <h3>Find Us</h3>
+        <p>Dieburger Str. 10<br>64287 Darmstadt-Nord, Germany</p>
+        <a href="https://maps.app.goo.gl/KEdS84KEJuu8p2cY8" target="_blank" class="card-link">Open in Maps &rarr;</a>
+      </div>
+      <div class="card">
+        <div class="card-icon">&#128154;</div>
+        <h3>Support DOKDA</h3>
+        <p>Your donations keep our doors open and our programmes running. JazakAllah Khair.</p>
+        <a href="donate.html" class="card-link">Donate &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="info-section" style="background:white;">
+    <div class="container">
+      <h2 class="section-title">Our Community</h2>
+      <div class="gallery-grid reveal">
+        <div class="gallery-item span-2">
+          <img src="DOKDA Volunteers.jpeg" alt="DOKDA Volunteers" loading="lazy" />
+          <div class="gallery-overlay"><span>DOKDA Volunteers</span></div>
+        </div>
+        <div class="gallery-item">
+          <img src="JUma Prayer.jpeg" alt="Jumu'ah Prayer" loading="lazy" />
+          <div class="gallery-overlay"><span>Jumu'ah Prayer</span></div>
+        </div>
+        <div class="gallery-item">
+          <img src="EID 2025.jpeg" alt="Eid 2025" loading="lazy" />
+          <div class="gallery-overlay"><span>Eid Celebration 2025</span></div>
+        </div>
+        <div class="gallery-item span-2">
+          <img src="Dinner.png" alt="Community Dinner" loading="lazy" />
+          <div class="gallery-overlay"><span>Community Dinner</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="info-section">
+    <div class="container">
+      <h2 class="section-title">Management Team / Vorstand</h2>
+      <div class="mgmt-grid reveal">
+        <div class="mgmt-card">
+          <div class="mgmt-avatar">AQ</div>
+          <div>
+            <div class="mgmt-name">Ashraf Qureshi</div>
+            <div class="mgmt-role">Management</div>
+          </div>
+        </div>
+        <div class="mgmt-card">
+          <div class="mgmt-avatar">SF</div>
+          <div>
+            <div class="mgmt-name">Syed Fahad Ijlal</div>
+            <div class="mgmt-role">Management</div>
+          </div>
+        </div>
+        <div class="mgmt-card">
+          <img src="Faraz Mehmood. Management picture.jpeg" alt="Faraz Mehmood" class="mgmt-avatar mgmt-photo" />
+          <div>
+            <div class="mgmt-name">Faraz Mehmood</div>
+            <div class="mgmt-role">Management</div>
+          </div>
+        </div>
+      </div>
+      <div class="mem-cta-block">
+        <h2>Ready to Join? / Bereit beizutreten?</h2>
+        <p>Fill out the form and become part of the DOKDA family today.<br>
+          F&uuml;llen Sie das Formular aus und werden Sie noch heute Teil der DOKDA-Familie.</p>
+        <a href="https://forms.gle/KEttbPnV1sTEhq9M9" target="_blank" class="btn-member">
+          Apply Now / Jetzt Mitglied werden &rarr;
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="logo.png" alt="DOKDA" class="footer-logo" />
+        <span>DOKDA</span>
+      </div>
+      <p>Dieburger Str. 10 &middot; 64287 Darmstadt-Nord &middot; Germany</p>
+      <p>&#128222; +49 157 53814555</p>
+      <div class="footer-social">
+        <a href="https://www.facebook.com/DokdaDarmstadt" target="_blank">&#128216; Facebook</a>
+        <a href="https://www.instagram.com/dokda.1" target="_blank">&#128247; Instagram</a>
+      </div>
+      <p class="footer-copy">&copy; <span id="year"></span> DOKDA e.V. &middot; All rights reserved</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const now = new Date();
+    document.getElementById('today-date').textContent = now.toLocaleDateString('en-GB', {weekday:'long', day:'numeric', month:'long', year:'numeric'});
+    document.getElementById('pclock-date').textContent = now.toLocaleDateString('en-GB', {weekday:'long', day:'numeric', month:'long', year:'numeric'});
+
+    function updateClock() {
+      const t = new Date();
+      document.getElementById('live-clock').textContent =
+        String(t.getHours()).padStart(2,'0') + ':' +
+        String(t.getMinutes()).padStart(2,'0') + ':' +
+        String(t.getSeconds()).padStart(2,'0');
+    }
+    setInterval(updateClock, 1000);
+    updateClock();
+
+    try {
+      document.getElementById('pclock-hijri').textContent =
+        new Intl.DateTimeFormat('en-TN-u-ca-islamic', {day:'numeric', month:'long', year:'numeric'}).format(now);
+    } catch(e) {}
+
+    const PRAYERS = ['Fajr','Dhuhr','Asr','Maghrib','Isha'];
+    const IQAMA  = {Fajr:'04:45', Dhuhr:'14:00', Asr:'+10', Maghrib:'+3', Isha:'+0'};
+    const LAT = 49.8766282, LNG = 8.6592487;
+
+    async function loadPrayers() {
+      try {
+        const ts = Math.floor(Date.now()/1000);
+        const res = await fetch(`https://api.aladhan.com/v1/timings/${ts}?latitude=${LAT}&longitude=${LNG}&method=3`);
+        const data = await res.json();
+        const timings = data.data.timings;
+        const nowMins = now.getHours()*60 + now.getMinutes();
+        const [sh, sm] = timings['Sunrise'].split(':').map(Number);
+        document.getElementById('pt-Sunrise').textContent =
+          `${sh%12||12}:${String(sm).padStart(2,'0')} ${sh>=12?'PM':'AM'}`;
+        let nextPrayer = null, nextMins = Infinity;
+        PRAYERS.forEach(p => {
+          const [h,m] = timings[p].split(':').map(Number);
+          const mins = h*60+m;
+          if (mins > nowMins && mins < nextMins) { nextMins = mins; nextPrayer = p; }
+        });
+        document.getElementById('prayer-times-row').innerHTML = PRAYERS.map(p => {
+          const [h,m] = timings[p].split(':').map(Number);
+          const fmt = `${h%12||12}:${String(m).padStart(2,'0')} ${h>=12?'PM':'AM'}`;
+          return `<div class="pt-card${p===nextPrayer?' active':''}">
+            <div class="pt-name">${p}</div>
+            <div class="pt-time">${fmt}</div>
+            <div class="pt-iqama">${IQAMA[p]}</div>
+          </div>`;
+        }).join('');
+      } catch(e) {
+        document.getElementById('prayer-times-row').innerHTML = '<div class="pt-loading">Could not load prayer times.</div>';
+      }
+    }
+    loadPrayers();
+
+    // Scroll reveal
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    // Animated counters
+    const counterObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.querySelectorAll('.counter-num').forEach(el => {
+          const target = parseInt(el.dataset.target);
+          const suffix = el.textContent.includes('+') ? '+' : '';
+          let current = 0;
+          const step = Math.max(1, Math.floor(target / 40));
+          const timer = setInterval(() => {
+            current += step;
+            if (current >= target) { current = target; clearInterval(timer); }
+            el.textContent = current + suffix;
+          }, 30);
+        });
+        counterObserver.unobserve(entry.target);
+      });
+    }, { threshold: 0.5 });
+    document.querySelectorAll('.counters-section').forEach(el => counterObserver.observe(el));
+  </script>
+</body>
+</html>

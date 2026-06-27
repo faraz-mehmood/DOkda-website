@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Events &ndash; DOKDA Darmstadt</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <nav class="navbar">
+    <a href="index.html" class="nav-logo">
+      <img src="logo.png" alt="DOKDA Logo" />
+      <div class="nav-logo-text">
+        <span class="logo-name">DOKDA</span>
+        <span class="logo-sub">Deutsch Orientalischer Kulturverein<br>Darmstadt</span>
+      </div>
+    </a>
+    <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')">&#9776;</button>
+    <ul class="nav-links">
+      <li><a href="index.html" class="">Home</a></li>
+      <li><a href="events.html" class="active">Events</a></li>
+      <li><a href="membership.html">Membership</a></li>
+      <li><a href="about.html" class="">About</a></li>
+      <li><a href="donate.html" class="btn-donate-nav ">Donate</a></li>
+    </ul>
+  </nav>
+  <div class="page-hero">
+    <h1>Events &amp; Programmes</h1>
+    <p>Stay connected with the DOKDA community</p>
+  </div>
+  <section class="events-section">
+    <div class="container">
+      <h2 class="section-title">Daily &amp; Weekly Prayers</h2>
+      <div class="event-list">
+        <div class="event-item">
+          <div class="event-date"><div class="event-day">&#128332;</div></div>
+          <div class="event-body">
+            <h3>Five Daily Prayers</h3>
+            <p>All five daily prayers are held in congregation at DOKDA. Check the homepage for today&rsquo;s prayer times.</p>
+            <span class="event-tag">Daily</span>
+          </div>
+        </div>
+        <div class="event-item">
+          <div class="event-date"><div class="event-day">&#128331;</div></div>
+          <div class="event-body">
+            <h3>Jumu&rsquo;ah Prayer</h3>
+            <p>Weekly Friday prayer. Khutbah begins after Dhuhr adhan. All brothers and sisters are welcome &mdash; please arrive early.</p>
+            <span class="event-tag">Weekly</span>
+          </div>
+        </div>
+      </div>
+
+      <div style="background:white;border-radius:var(--radius);padding:2rem;box-shadow:var(--shadow);max-width:760px;margin:2rem auto 0;text-align:center;border-left:5px solid var(--green);">
+        <h3 style="color:var(--blue-deeper);margin-bottom:0.5rem;">&#128172; Stay Updated on Live Events</h3>
+        <p style="color:var(--text-muted);margin-bottom:1rem;">For upcoming community events, lectures, Quran classes, and gatherings &mdash; join our WhatsApp group for the latest updates.</p>
+        <a href="https://chat.whatsapp.com/JgMg9Bzddik5cZiciEfzmE" target="_blank" class="btn-primary" style="display:inline-block;">Join WhatsApp Group &rarr;</a>
+      </div>
+    </div>
+  </section>
+  <section class="announcements-section">
+    <div class="container">
+      <h2 class="section-title">Announcements</h2>
+      <div class="announcement">
+        <div class="announcement-date">15 June 2026</div>
+        <h4>Summer Quran Programme &ndash; Registration Open</h4>
+        <p>We are pleased to announce our summer Quran programme for children aged 6&ndash;14. Classes begin July 1. Please contact us to register your child.</p>
+      </div>
+      <div class="announcement">
+        <div class="announcement-date">10 June 2026</div>
+        <h4>Zakat Al-Fitr &amp; Sadaqah Collections</h4>
+        <p>Alhamdulillah, we collected and distributed Zakat Al-Fitr to families in need this Ramadan. JazakAllah Khair to all who contributed.</p>
+      </div>
+      <div class="announcement">
+        <div class="announcement-date">1 June 2026</div>
+        <h4>Mosque Maintenance &ndash; Weekend Closure</h4>
+        <p>The mosque will undergo routine maintenance on the weekend of June 28&ndash;29. Jumu&#8216;ah will proceed as normal on Friday June 27.</p>
+      </div>
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="logo.png" alt="DOKDA" class="footer-logo" />
+        <span>DOKDA</span>
+      </div>
+      <p>Dieburger Str. 10 &middot; 64287 Darmstadt-Nord &middot; Germany</p>
+      <p>&#128222; +49 157 53814555</p>
+      <div class="footer-social">
+        <a href="https://www.facebook.com/DokdaDarmstadt" target="_blank">&#128216; Facebook</a>
+        <a href="https://www.instagram.com/dokda.1" target="_blank">&#128247; Instagram</a>
+      </div>
+      <p class="footer-copy">&copy; <span id="year"></span> DOKDA e.V. &middot; All rights reserved</p>
+    </div>
+  </footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
