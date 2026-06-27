@@ -4,6 +4,8 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Donate &ndash; DOKDA Darmstadt</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
@@ -37,7 +39,7 @@
   </section>
   <section class="donate-section">
     <div class="donate-grid">
-      <div class="donate-info">
+      <div class="donate-info reveal">
         <h2>Why Your Donation Matters</h2>
         <p>DOKDA relies entirely on the generosity of our community. Your donations fund the day-to-day running of the mosque, our educational programmes, community events, and maintenance of the building.</p>
         <blockquote>
@@ -55,7 +57,7 @@
           &#128176; Zakat and Sadaqah distribution to those in need
         </p>
       </div>
-      <div class="donate-methods">
+      <div class="donate-methods reveal">
         <div class="donate-card">
           <h3>&#127981; Bank Transfer / Bank&uuml;berweisung</h3>
           <p>The most direct way to donate. Set up a standing order for regular giving.</p>
@@ -112,6 +114,12 @@
       <p class="footer-copy">&copy; <span id="year"></span> DOKDA e.V. &middot; All rights reserved</p>
     </div>
   </footer>
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
 </body>
 </html>
