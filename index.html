@@ -252,4 +252,50 @@
           `${sh%12||12}:${String(sm).padStart(2,'0')} ${sh>=12?'PM':'AM'}`;
         let nextPrayer = null, nextMins = Infinity;
         PRAYERS.forEach(p => {
-          const [h,m] = timings[p].split(':').map(
+          const [h,m] = timings[p].split(':').map(Number);
+          const mins = h*60+m;
+          if (mins > nowMins && mins < nextMins) { nextMins = mins; nextPrayer = p; }
+        });
+        document.getElementById('prayer-times-row').innerHTML = PRAYERS.map(p => {
+          const [h,m] = timings[p].split(':').map(Number);
+          const fmt = `${h%12||12}:${String(m).padStart(2,'0')} ${h>=12?'PM':'AM'}`;
+          return `<div class="pt-card${p===nextPrayer?' active':''}">
+            <div class="pt-name">${p}</div>
+            <div class="pt-time">${fmt}</div>
+            <div class="pt-iqama">${IQAMA[p]}</div>
+          </div>`;
+        }).join('');
+      } catch(e) {
+        document.getElementById('prayer-times-row').innerHTML = '<div class="pt-loading">Could not load prayer times.</div>';
+      }
+    }
+    loadPrayers();
+
+    // Scroll reveal
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    // Animated counters
+    const counterObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.querySelectorAll('.counter-num').forEach(el => {
+          const target = parseInt(el.dataset.target);
+          const suffix = el.textContent.includes('+') ? '+' : '';
+          let current = 0;
+          const step = Math.max(1, Math.floor(target / 40));
+          const timer = setInterval(() => {
+            current += step;
+            if (current >= target) { current = target; clearInterval(timer); }
+            el.textContent = current + suffix;
+          }, 30);
+        });
+        counterObserver.unobserve(entry.target);
+      });
+    }, { threshold: 0.5 });
+    document.querySelectorAll('.counters-section').forEach(el => counterObserver.observe(el));
+  </script>
+</body>
+</html>
