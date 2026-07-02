@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>DOKDA – Deutsch Orientalischer Kulturverein Darmstadt</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -32,7 +32,8 @@
     <div class="hero-bg"></div>
     <div class="hero-pattern"></div>
     <div class="hero-content">
-      <p class="hero-sub">&#1576;&#1616;&#1587;&#1618;&#1605;&#1616; &#1575;&#1604;&#1604;&#1617;&#1614;&#1607;&#1616; &#1575;&#1604;&#1585;&#1617;&#1614;&#1581;&#1618;&#1605;&#1614;&#1606;&#1616; &#1575;&#1604;&#1585;&#1617;&#1614;&#1581;&#1616;&#1610;&#1605;&#1616;</p>
+      <p class="hero-sub" dir="rtl">&#1576;&#1616;&#1587;&#1618;&#1605;&#1616; &#1575;&#1604;&#1604;&#1617;&#1614;&#1607;&#1616; &#1575;&#1604;&#1585;&#1617;&#1614;&#1581;&#1618;&#1605;&#1614;&#1606;&#1616; &#1575;&#1604;&#1585;&#1617;&#1614;&#1581;&#1616;&#1610;&#1605;&#1616;</p>
+      <span class="hero-kicker">Darmstadt, Germany</span>
       <h1>Deutsch Orientalischer Kulturverein</h1>
       <h2>DOKDA &ndash; Darmstadt</h2>
       <p class="hero-desc">Uniting Muslims of all backgrounds in Darmstadt. A place of worship, learning, and community.</p>
@@ -40,6 +41,11 @@
         <a href="about.html" class="btn-primary">Visit Us</a>
         <a href="events.html" class="btn-secondary">Upcoming Events</a>
       </div>
+    </div>
+    <div class="hero-divider">
+      <svg viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,32 C240,60 480,0 720,20 C960,40 1200,58 1440,24 L1440,60 L0,60 Z" fill="#ffffff"/>
+      </svg>
     </div>
   </section>
 
@@ -95,24 +101,32 @@
   <section class="info-section">
     <div class="container cards-row reveal">
       <div class="card">
-        <div class="card-icon">&#128332;</div>
+        <div class="card-icon icon-badge">
+          <svg class="icon" viewBox="0 0 24 24"><path d="M12 2v3"/><path d="M8 8a4 4 0 0 1 8 0c0 2-1.5 3-1.5 5h-5C9.5 11 8 10 8 8Z"/><path d="M4 21V13a2 2 0 0 1 2-2h1"/><path d="M20 21V13a2 2 0 0 0-2-2h-1"/><path d="M9.5 13h5v8h-5z"/><path d="M2 21h20"/></svg>
+        </div>
         <h3>Friday Prayer</h3>
         <p>Jumu'ah Khutbah begins shortly after Dhuhr adhan. All are welcome &mdash; please arrive early.</p>
       </div>
       <div class="card">
-        <div class="card-icon">&#128197;</div>
+        <div class="card-icon icon-badge badge-green">
+          <svg class="icon" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        </div>
         <h3>Events</h3>
         <p>Islamic lectures, Quran classes, community iftars, and cultural programmes throughout the year.</p>
         <a href="events.html" class="card-link">See all events &rarr;</a>
       </div>
       <div class="card">
-        <div class="card-icon">&#128205;</div>
+        <div class="card-icon icon-badge">
+          <svg class="icon" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        </div>
         <h3>Find Us</h3>
         <p>Dieburger Str. 10<br>64287 Darmstadt-Nord, Germany</p>
         <a href="https://maps.app.goo.gl/KEdS84KEJuu8p2cY8" target="_blank" rel="noopener noreferrer" class="card-link">Open in Maps &rarr;</a>
       </div>
       <div class="card">
-        <div class="card-icon">&#128154;</div>
+        <div class="card-icon icon-badge badge-green">
+          <svg class="icon" viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.8 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg>
+        </div>
         <h3>Support DOKDA</h3>
         <p>Your donations keep our doors open and our programmes running. JazakAllah Khair.</p>
         <a href="donate.html" class="card-link">Donate &rarr;</a>
@@ -188,10 +202,14 @@
         <span>DOKDA</span>
       </div>
       <p>Dieburger Str. 10 &middot; 64287 Darmstadt-Nord &middot; Germany</p>
-      <p>&#128222; +49 157 53814555</p>
+      <p class="footer-contact"><svg class="icon" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg> +49 157 53814555</p>
       <div class="footer-social">
-        <a href="https://www.facebook.com/DokdaDarmstadt" target="_blank" rel="noopener noreferrer">&#128216; Facebook</a>
-        <a href="https://www.instagram.com/dokda.1" target="_blank" rel="noopener noreferrer">&#128247; Instagram</a>
+        <a href="https://www.facebook.com/DokdaDarmstadt" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Facebook">
+          <svg class="icon" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+        </a>
+        <a href="https://www.instagram.com/dokda.1" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Instagram">
+          <svg class="icon" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+        </a>
       </div>
       <p class="footer-copy">&copy; <span id="year"></span> DOKDA e.V. &middot; All rights reserved</p>
     </div>
@@ -234,50 +252,4 @@
           `${sh%12||12}:${String(sm).padStart(2,'0')} ${sh>=12?'PM':'AM'}`;
         let nextPrayer = null, nextMins = Infinity;
         PRAYERS.forEach(p => {
-          const [h,m] = timings[p].split(':').map(Number);
-          const mins = h*60+m;
-          if (mins > nowMins && mins < nextMins) { nextMins = mins; nextPrayer = p; }
-        });
-        document.getElementById('prayer-times-row').innerHTML = PRAYERS.map(p => {
-          const [h,m] = timings[p].split(':').map(Number);
-          const fmt = `${h%12||12}:${String(m).padStart(2,'0')} ${h>=12?'PM':'AM'}`;
-          return `<div class="pt-card${p===nextPrayer?' active':''}">
-            <div class="pt-name">${p}</div>
-            <div class="pt-time">${fmt}</div>
-            <div class="pt-iqama">${IQAMA[p]}</div>
-          </div>`;
-        }).join('');
-      } catch(e) {
-        document.getElementById('prayer-times-row').innerHTML = '<div class="pt-loading">Could not load prayer times.</div>';
-      }
-    }
-    loadPrayers();
-
-    // Scroll reveal
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-    }, { threshold: 0.12 });
-    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
-    // Animated counters
-    const counterObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (!entry.isIntersecting) return;
-        entry.target.querySelectorAll('.counter-num').forEach(el => {
-          const target = parseInt(el.dataset.target);
-          const suffix = el.textContent.includes('+') ? '+' : '';
-          let current = 0;
-          const step = Math.max(1, Math.floor(target / 40));
-          const timer = setInterval(() => {
-            current += step;
-            if (current >= target) { current = target; clearInterval(timer); }
-            el.textContent = current + suffix;
-          }, 30);
-        });
-        counterObserver.unobserve(entry.target);
-      });
-    }, { threshold: 0.5 });
-    document.querySelectorAll('.counters-section').forEach(el => counterObserver.observe(el));
-  </script>
-</body>
-</html>
+          const [h,m] = timings[p].split(':').map(
